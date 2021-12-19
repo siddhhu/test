@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Lets Lease It</title>
+  </head>
+  <body>
+    <h1 class="text-center">Preffered Car for You </h1>
+ 
+    <div class="container-fluid" style="margin-left:400px;">
+      {% for lis in res %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body" style="color:red;text-align:center;">
+       
+     {% if  lis[0]== 0  %}
+  <img class="card-img-top" src="https://imgd.aeplcdn.com/1056x594/cw/ec/26916/Audi-Q3-Front-view-92293.jpg?v=201711021421&q=85" alt="Card image cap">
+    <h5 class="card-title">AUDI</h5>
+  {% endif %}
+   {% if  lis[0]==1  %}
+     <img class="card-img-top" src="https://imgd.aeplcdn.com/0x0/n/cw/ec/45242/bmw-x1-facelift-right-front-three-quarter2.jpeg" alt="Card image cap">
+    <h5 class="card-title">BMW</h5>
+  {% endif %}
+     {% if  lis[0]==3  %}
+     <img class="card-img-top" src="https://www.hyundai.com/content/dam/hyundai/in/en/data/vehicle-thumbnail/model/Tucson_460-x-250.png">
+    <h5 class="card-title">HYUNDAI</h5>
+  {% endif %}
+     {% if  lis[0]==4  %}
+     <img class="card-img-top" src="https://imgd.aeplcdn.com/0x0/n/cw/ec/41523/sonet-exterior-right-front-three-quarter-108.jpeg" alt="Card image cap">
+    <h5 class="card-title">KIA</h5>
+  {% endif %}
+
+
+
+     {% if  lis[0]==5 %}
+     <img class="card-img-top" src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20200507071833_Land_Rover-Defender_90.jpg&h=795&w=1200&c=1" alt="Card image cap">
+    <h5 class="card-title">Land Rover</h5>
+  {% endif %}
+     {% if  lis[0]==6  %}
+     <img class="card-img-top" src="https://global.toyota/pages/news/images/kv/2020/07/07/20200707_02_t_w1280.jpg" alt="Card image cap">
+    <h5 class="card-title">LEXUS</h5>
+  {% endif %}
+     {% if  lis[0]==7 %}
+     <img class="card-img-top" src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/mercedes_benz_660_050120090507.jpg" alt="Card image cap">
+    <h5 class="card-title">MERCEDES-BENZ</h5>
+  {% endif %}
+     {% if  lis[0]==8 %}
+     <img class="card-img-top" src="https://imgd.aeplcdn.com/0x0/cw/ec/34561/Mini-Cooper-Convertible-Exterior-128087.jpg?wm=0" alt="Card image cap">
+    <h5 class="card-title">MINI</h5>
+  {% endif %}
+     {% if  lis[0]==9  %}
+     <img class="card-img-top" src="https://imgd.aeplcdn.com/0x0/cw/ec/32596/Nissan-Kicks-Right-Front-Three-Quarter-159680.jpg?wm=0" alt="Card image cap">
+    <h5 class="card-title">NISSIAN</h5>
+  {% endif %}
+     {% if  lis[0]==10  %}
+     <img class="card-img-top" src="https://www.seat.com/content/global/seat-website/en/seat-cars/new-cars-offers/_jcr_content/article/singleimage_842901650/singleimageimage.resizedViewPort.scale.assetRootXL.jpg" alt="Card image cap">
+    <h5 class="card-title">SEAT</h5>
+  {% endif %}
+      {% if  lis[0]==11  %}
+     <img class="card-img-top" src="https://cdn.motor1.com/images/mgl/P4eV8/s1/2021-skoda-kodiaq-facelift-rendering.jpg" alt="Card image cap">
+    <h5 class="card-title">SKODA</h5>
+  {% endif %}
+      {% if  lis[0]==12  %}
+     <img class="card-img-top" src="https://www.zdnet.com/a/hub/i/2020/11/23/8f00ebf8-09f0-4458-810a-9ebbff9e690b/tesla-model-x.png" alt="Card image cap">
+    <h5 class="card-title">TESLA</h5>
+  {% endif %}
+      {% if  lis[0]== 13 %}
+     <img class="card-img-top" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8tAzgjI1sWk/v0/-1x-1.jpg" alt="Card image cap">
+    <h5 class="card-title">TOYOTA</h5>
+  {% endif %}
+      {% if lis[0]==14 %}
+     <img class="card-img-top" src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=http%3A%2F%2Fcms.haymarketindia.net%2Fmodel%2Fuploads%2Fmodelimages%2FPassatModelImage.jpg&h=300&w=450&c=1" alt="Card image cap">
+    <h5 class="card-title">VOLKSWAGEN</h5>
+  {% endif %}
+  </div>
+ 
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Initial Payment: £ {{lis[5]}}</li>
+    <li class="list-group-item">Monthly Payment :£ {{lis[6]}}</li>
+    <li class="list-group-item">Upfront on Initial Payment {{lis[1]}} Months</li>
+    <li class="list-group-item">Contract Length {{lis[2]}} Months</li>
+    <li class="list-group-item">Annual Mileage {{lis[3]}} </li>
+    <li class="list-group-item">Document Fee :£ {{lis[4]}} </li>
+  </ul>
+ 
+
+  
+</div>
+{% endfor %}
+
+<a href='/'>Go Back</a>
+
+  
+  </div>
+</form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http
+    s://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
